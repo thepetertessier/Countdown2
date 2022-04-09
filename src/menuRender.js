@@ -7,11 +7,11 @@ const MenuRender = (props) => {
     return (
         <>
         <p className="mealName"> Breakfast </p>
-        <ItemsRender index={0} meal={'Breakfast'}/>
+        <ItemsRender key={0} meal={'Breakfast'} items={props.menu.breakfast} isVeg={props.isVeg}/>
         <p className="mealName"> Lunch </p>
-        <ItemsRender index={1} meal={'Lunch'}/>
+        <ItemsRender key={1} meal={'Lunch'} items={props.menu.lunch} isVeg={props.isVeg}/>
         <p className="mealName"> Dinner </p>
-        <ItemsRender index={2} meal={'Dinner'}/>
+        <ItemsRender key={2} meal={'Dinner'} items={props.menu.dinner} isVeg={props.isVeg}/>
         </>
     )
 }

@@ -1,8 +1,20 @@
 import React from "react";
 
 const ItemsRender = (props) => {
+    const itemsArray = props.items.slice();
+    const itemsFiltered = [];
+    for (let i = 0; i < itemsArray.length; i++) {
+        if (!props.isVeg || itemsArray[i].vegetarian) {
+            itemsFiltered.push(itemsArray[i])
+        }
+    };
     return (
-        <p className="title">{meal}</p>
+        // <p className="item"> {itemsFiltered.map((item) => item.food, item.price)} </p>
+        <>
+        <p className="item"> {itemsFiltered[0] ? itemsFiltered[0].food : ''} (${itemsFiltered[0] ? itemsFiltered[0].price : ''}) </p>
+        <p className="item"> {itemsFiltered[1] ? itemsFiltered[1].food : ''} (${itemsFiltered[1] ? itemsFiltered[0].price : ''}) </p>
+        <p className="item"> {itemsFiltered[2] ? itemsFiltered[2].food : ''} (${itemsFiltered[2] ? itemsFiltered[0].price : ''}) </p>
+        </>
     )
 };
 
