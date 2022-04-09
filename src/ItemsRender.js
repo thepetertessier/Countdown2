@@ -1,9 +1,9 @@
 import React from "react";
 
-const TitleRender = () => {
+const ItemsRender = (props) => {
     return (
         <p className="title"> Menu </p>
     )
 };
 
-export default TitleRender;
+export default ItemsRender;

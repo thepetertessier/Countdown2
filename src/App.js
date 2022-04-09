@@ -1,11 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import menuRender from "./menuRender.js";
-import titleRender from "./titleRender.js";
+import { useState } from "react";
+import TitleRender from "./TitleRender.js";
+import ButtonRender from "./ButtonRender.js";
+import MenuRender from "./MenuRender.js";
 
 
 function App() {
-  const menu = {
+  const [isShowingVeg, setIsShowingVeg] = useState(false);
+  const myMenu = {
     "breakfast": [
       {"food": "pancakes", "price": 5.00, "vegetarian": true},
       {"food": "waffles", "price": 5.00, "vegetarian": true},
@@ -24,7 +27,9 @@ function App() {
   }; 
   return (
     <div className="App">
-      {titleRender}
+      <TitleRender/>
+      <ButtonRender isVeg={isShowingVeg} setIsVeg={setIsShowingVeg}/>
+      <MenuRender isVeg={isShowingVeg} menu={myMenu}/>
     </div>
   );
 }

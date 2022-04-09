@@ -1,9 +1,12 @@
 import React from "react";
-const menuRender = (props) => {
+const MenuRender = (props) => {
+    const meals = Object.keys(props.menu);
     return (
         <>
-            <p> {props.menu}
-            </p>
+        <p>{meals[0]}</p>
+        <p>{meals[1]}</p>
+        <p>{meals[2]}</p>
         </>
     )
 }
+export default MenuRender;
