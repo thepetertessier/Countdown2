@@ -2,7 +2,7 @@ import React from "react";
 
 const ItemsRender = (props) => {
     return (
-        <p className="title"> Menu </p>
+        <p className="title">{meal}</p>
     )
 };
 

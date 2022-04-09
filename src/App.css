@@ -39,6 +39,14 @@
 
 .title {
   text-align: center;
-  font-size: large;
+  font-size: 3vw;
   font-weight: bold;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.mealName {
+  text-align: center;
+  font-size: 3vw;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
